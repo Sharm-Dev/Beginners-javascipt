@@ -8,7 +8,7 @@
 // change the count-el in the HTML to reflect the new count
 
 let countEl = document.getElementById("count-el");
-console.log(countEl);
+// console.log(countEl);
 // 1. Grab the save-el paragrah and store it in a variable called saveEl
 let saveEl = document.getElementById("save-el");
 
@@ -16,7 +16,7 @@ let count = 0;
 
 function increment() {
     count += 1;
-    countEl.innerText = count;
+    countEl.textContent = count;
   // console.log(count);
 }
 
@@ -30,8 +30,8 @@ function increment() {
 function save() { 
 
   let countAndDash = ` ${count} -`;
-  saveEl.innerText += countAndDash;
-
-
+  saveEl.textContent += countAndDash;
+  countEl.textContent = 0;
+  count = 0;
   console.log(count)
 }
